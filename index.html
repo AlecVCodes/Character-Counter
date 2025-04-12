@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <img src="logo-dark-theme.svg" alt="logo-dark-theme" />
+        <img
+          src="logo-light-theme.svg"
+          alt="logo-light-theme"
+          style="display: none"
+        />
+        <button class="light-dark-toggle">
+          <img src="icon-sun.svg" alt="sun-icon" style="display: block" />
+          <img src="icon-moon.svg" alt="moon-icon" style="display: none" />
+        </button>
+      </header>
+      <h1>Analyze your text in real-time</h1>
+      <section class="user-input-area">
+        <textarea
+          class="textarea"
+          placeholder="Start typing here… (or paste your text)"
+        ></textarea>
+        <div class="info">
+          <div class="checkboxes">
+            <div class="checkbox-label-container">
+              <input
+                type="checkbox"
+                name="exclude-spaces-checkbox"
+                id="exclude-spaces-checkbox"
+              />
+
+              <label for="exclude-spaces-checkbox">Exclude Spaces</label>
+            </div>
+            <div class="checkbox-label-container">
+              <input
+                type="checkbox"
+                name="character-limit-checkbox"
+                id="character-limit-checkbox"
+              />
+
+              <label for="character-limit-checkbox">Set Character Limit</label>
+              <input class="character-limit-box" type="number" value="200" />
+            </div>
+          </div>
+          <span>Aprox. reading time: 0 minute</span>
+        </div>
+      </section>
+
+      <section class="data-section">
+        <div class="data-cards">
+          <div class="card total-characters-card">
+            <span class="data-count">00</span>
+            <span class="label">Total Characters</span>
+          </div>
+          <div class="card word-count-card">
+            <span class="data-count">00</span>
+            <span class="label">Word Count</span>
+          </div>
+          <div class="card sentence-count-card">
+            <span class="data-count">00</span>
+            <span class="label">Sentence Count</span>
+          </div>
+        </div>
+        <div class="Letter-density-container">
+          <h2>Letter Density</h2>
+          <div class="letters-container">
+            <p>No Characters found. Start typing to see letter density.</p>
+          </div>
+        </div>
+      </section>
+
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
